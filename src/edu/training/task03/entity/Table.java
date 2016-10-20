@@ -12,11 +12,11 @@ public class Table {
         lock = new ReentrantLock();
     }
 
-    public int getTableId() {
+    int getTableId() {
         return tableId;
     }
 
-    public ReentrantLock getLock() {
+    ReentrantLock getLock() {
         return lock;
     }
 

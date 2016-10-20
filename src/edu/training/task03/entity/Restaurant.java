@@ -11,7 +11,7 @@ public class Restaurant {
         restaurantTables = new LinkedList<>();
     }
 
-    public Queue<Table> getRestaurantTables() {
+    Queue<Table> getRestaurantTables() {
         return restaurantTables;
     }
 
