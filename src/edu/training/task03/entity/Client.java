@@ -1,10 +1,14 @@
 package edu.training.task03.entity;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.util.concurrent.TimeUnit;
 
 public class Client extends Thread {
 
-    private static final long MAX_WAIT = 1000;
+    private final static Logger LOG = LogManager.getLogger(Client.class);
+    private static final long MAX_WAIT = 20;
     private final int clientId;
     private Restaurant restaurant;
 
@@ -20,20 +24,19 @@ public class Client extends Thread {
             for (Table table : restaurant.getRestaurantTables()) {
                 boolean isLock = false;
                 try {
-                    isLock = table.getLock().tryLock(1000, TimeUnit.MILLISECONDS);
-                    System.out.println("Client " + clientId + " try took " + table.getTableId());
+                    isLock = table.getLock().tryLock(50, TimeUnit.MILLISECONDS);
                     if(isLock) {
-                        System.out.println("Client " + clientId + " using " + table.getTableId());
-                        TimeUnit.MILLISECONDS.sleep(2000);
+                        LOG.info("Client " + clientId + " using " + table.getTableId());
+                        TimeUnit.MILLISECONDS.sleep(100);
                         break;
                     } else {
-                        System.out.println("Client " + clientId + " can't took " + table.getTableId());
+                        LOG.info("Client " + clientId + " can't took " + table.getTableId());
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
                     if(isLock) {
-                        System.out.println("Client " + clientId + " release " + table.getTableId());
+                        LOG.info("Client " + clientId + " release " + table.getTableId());
                         table.getLock().unlock();
                     }
                 }

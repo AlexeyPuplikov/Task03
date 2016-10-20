@@ -7,6 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         Restaurant restaurant = Creator.createRestaurant(6);
-        Creator.createListOfClient(7, restaurant);
+        Creator.createListOfClient(3, restaurant);
     }
 }
