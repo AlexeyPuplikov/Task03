@@ -32,7 +32,7 @@ public class Client extends Thread {
                     LOG.info("Client " + clientId + " can't took " + table.getTableId());
                 }
             } catch (InterruptedException e) {
-                LOG.error("");
+                LOG.error("table is not available", e);
             } finally {
                 if(isLock) {
                     LOG.info("Client " + clientId + " release " + table.getTableId());
