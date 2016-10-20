@@ -24,18 +24,18 @@ public class Client extends Thread {
             try {
                 isLock = table.getLock().tryLock(50, TimeUnit.MILLISECONDS);
                 if(isLock) {
-                    LOG.info("Client " + clientId + " using " + table.getTableId());
+                    LOG.info("Client " + clientId + " using " + " table " + table.getTableId());
                     TimeUnit.MILLISECONDS.sleep(100);
                     this.reservationDone = true;
                     break;
                 } else {
-                    LOG.info("Client " + clientId + " can't took " + table.getTableId());
+                    LOG.info("Client " + clientId + " can't took table " + table.getTableId());
                 }
             } catch (InterruptedException e) {
                 LOG.error("table is not available", e);
             } finally {
                 if(isLock) {
-                    LOG.info("Client " + clientId + " release " + table.getTableId());
+                    LOG.info("Client " + clientId + " release table " + table.getTableId());
                     table.getLock().unlock();
                 }
             }
