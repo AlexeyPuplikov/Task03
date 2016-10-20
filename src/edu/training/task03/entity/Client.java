@@ -11,36 +11,45 @@ public class Client extends Thread {
     private static final long MAX_WAIT = 20;
     private final int clientId;
     private Restaurant restaurant;
+    private boolean reservationDone;
 
     public Client(int clientId, Restaurant restaurant) {
         this.clientId = clientId;
         this.restaurant = restaurant;
     }
 
+    public void reservation() {
+        for (Table table : restaurant.getRestaurantTables()) {
+            boolean isLock = false;
+            try {
+                isLock = table.getLock().tryLock(50, TimeUnit.MILLISECONDS);
+                if(isLock) {
+                    LOG.info("Client " + clientId + " using " + table.getTableId());
+                    TimeUnit.MILLISECONDS.sleep(100);
+                    this.reservationDone = true;
+                    break;
+                } else {
+                    LOG.info("Client " + clientId + " can't took " + table.getTableId());
+                }
+            } catch (InterruptedException e) {
+                LOG.error("");
+            } finally {
+                if(isLock) {
+                    LOG.info("Client " + clientId + " release " + table.getTableId());
+                    table.getLock().unlock();
+                }
+            }
+        }
+    }
+
     @Override
     public void run() {
         long currentTime = System.currentTimeMillis();
         while ((currentTime + MAX_WAIT) > System.currentTimeMillis()) {
-            for (Table table : restaurant.getRestaurantTables()) {
-                boolean isLock = false;
-                try {
-                    isLock = table.getLock().tryLock(50, TimeUnit.MILLISECONDS);
-                    if(isLock) {
-                        LOG.info("Client " + clientId + " using " + table.getTableId());
-                        TimeUnit.MILLISECONDS.sleep(100);
-                        break;
-                    } else {
-                        LOG.info("Client " + clientId + " can't took " + table.getTableId());
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } finally {
-                    if(isLock) {
-                        LOG.info("Client " + clientId + " release " + table.getTableId());
-                        table.getLock().unlock();
-                    }
-                }
-            }
+            this.reservation();
+            if (!this.reservationDone) {
+                LOG.info("Client " + this.clientId + " left the restaurant");
             }
         }
+    }
 }
