@@ -5,7 +5,6 @@ import java.util.Queue;
 
 public class Restaurant {
 
-    private int countOfUsingTables;
     private Queue<Table> restaurantTables;
 
     public Restaurant() {
@@ -20,15 +19,4 @@ public class Restaurant {
         this.restaurantTables.add(table);
     }
 
-    public int getCountOfUsingTables() {
-        return countOfUsingTables;
-    }
-
-    public void IncreaseTablesCounter(){
-        countOfUsingTables++;
-    }
-
-    public void DecreaseTablesCounter(){
-        countOfUsingTables--;
-    }
 }
