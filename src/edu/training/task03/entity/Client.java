@@ -18,7 +18,7 @@ public class Client extends Thread {
         this.restaurant = restaurant;
     }
 
-    public void reservation() {
+    private void reservation() {
         for (Table table : restaurant.getRestaurantTables()) {
             boolean isLock = false;
             try {
