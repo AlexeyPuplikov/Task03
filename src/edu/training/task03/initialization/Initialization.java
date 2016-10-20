@@ -1,4 +1,4 @@
-package edu.training.task03.creator;
+package edu.training.task03.initialization;
 
 import edu.training.task03.entity.Client;
 import edu.training.task03.entity.Restaurant;

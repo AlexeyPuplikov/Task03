@@ -1,6 +1,6 @@
 package edu.training.task03.main;
 
-import edu.training.task03.creator.Initialization;
+import edu.training.task03.initialization.Initialization;
 import edu.training.task03.entity.Restaurant;
 
 public class Main {
