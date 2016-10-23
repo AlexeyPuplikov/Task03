@@ -15,3 +15,54 @@
 2016-10-20 23:48:04,801 INFO e.t.t.e.Client [Thread-6] Client 4 left the restaurant
 2016-10-20 23:48:04,801 INFO e.t.t.e.Client [Thread-5] Client 3 left the restaurant
 2016-10-20 23:48:04,847 INFO e.t.t.e.Client [Thread-4] Client 2 release table 2
+2016-10-23 18:59:22,401 INFO e.t.t.e.Client [Thread-3] Client 1 using  table 0
+2016-10-23 18:59:22,448 INFO e.t.t.e.Client [Thread-2] Client 0 can't took table 0
+2016-10-23 18:59:22,448 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 0
+2016-10-23 18:59:22,448 INFO e.t.t.e.Client [Thread-2] Client 0 using  table 1
+2016-10-23 18:59:22,448 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 0
+2016-10-23 18:59:22,448 INFO e.t.t.e.Client [Thread-5] Client 3 can't took table 0
+2016-10-23 18:59:22,498 INFO e.t.t.e.Client [Thread-5] Client 3 can't took table 1
+2016-10-23 18:59:22,498 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 1
+2016-10-23 18:59:22,498 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 1
+2016-10-23 18:59:22,498 INFO e.t.t.e.Client [Thread-5] Client 3 using  table 2
+2016-10-23 18:59:22,503 INFO e.t.t.e.Client [Thread-3] Client 1 release table 0
+2016-10-23 18:59:22,549 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 2
+2016-10-23 18:59:22,549 INFO e.t.t.e.Client [Thread-2] Client 0 release table 1
+2016-10-23 18:59:22,549 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 2
+2016-10-23 18:59:22,549 INFO e.t.t.e.Client [Thread-4] Client 2 left the restaurant
+2016-10-23 18:59:22,549 INFO e.t.t.e.Client [Thread-6] Client 4 left the restaurant
+2016-10-23 18:59:22,598 INFO e.t.t.e.Client [Thread-5] Client 3 release table 2
+2016-10-23 18:59:28,970 INFO e.t.t.e.Client [Thread-2] Client 0 using  table 0
+2016-10-23 18:59:29,017 INFO e.t.t.e.Client [Thread-3] Client 1 can't took table 0
+2016-10-23 18:59:29,017 INFO e.t.t.e.Client [Thread-3] Client 1 using  table 1
+2016-10-23 18:59:29,017 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 0
+2016-10-23 18:59:29,017 INFO e.t.t.e.Client [Thread-5] Client 3 can't took table 0
+2016-10-23 18:59:29,017 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 0
+2016-10-23 18:59:29,069 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 1
+2016-10-23 18:59:29,069 INFO e.t.t.e.Client [Thread-5] Client 3 can't took table 1
+2016-10-23 18:59:29,069 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 1
+2016-10-23 18:59:29,069 INFO e.t.t.e.Client [Thread-6] Client 4 using  table 2
+2016-10-23 18:59:29,071 INFO e.t.t.e.Client [Thread-2] Client 0 release table 0
+2016-10-23 18:59:29,117 INFO e.t.t.e.Client [Thread-3] Client 1 release table 1
+2016-10-23 18:59:29,120 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 2
+2016-10-23 18:59:29,120 INFO e.t.t.e.Client [Thread-5] Client 3 can't took table 2
+2016-10-23 18:59:29,120 INFO e.t.t.e.Client [Thread-4] Client 2 left the restaurant
+2016-10-23 18:59:29,120 INFO e.t.t.e.Client [Thread-5] Client 3 left the restaurant
+2016-10-23 18:59:29,169 INFO e.t.t.e.Client [Thread-6] Client 4 release table 2
+2016-10-23 18:59:32,307 INFO e.t.t.e.Client [Thread-3] Client 1 using  table 0
+2016-10-23 18:59:32,356 INFO e.t.t.e.Client [Thread-2] Client 0 can't took table 0
+2016-10-23 18:59:32,356 INFO e.t.t.e.Client [Thread-2] Client 0 using  table 1
+2016-10-23 18:59:32,356 INFO e.t.t.e.Client [Thread-5] Client 3 can't took table 0
+2016-10-23 18:59:32,356 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 0
+2016-10-23 18:59:32,356 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 0
+2016-10-23 18:59:32,407 INFO e.t.t.e.Client [Thread-5] Client 3 can't took table 1
+2016-10-23 18:59:32,407 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 1
+2016-10-23 18:59:32,407 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 1
+2016-10-23 18:59:32,407 INFO e.t.t.e.Client [Thread-5] Client 3 using  table 2
+2016-10-23 18:59:32,409 INFO e.t.t.e.Client [Thread-3] Client 1 release table 0
+2016-10-23 18:59:32,456 INFO e.t.t.e.Client [Thread-2] Client 0 release table 1
+2016-10-23 18:59:32,458 INFO e.t.t.e.Client [Thread-6] Client 4 can't took table 2
+2016-10-23 18:59:32,458 INFO e.t.t.e.Client [Thread-4] Client 2 can't took table 2
+2016-10-23 18:59:32,458 INFO e.t.t.e.Client [Thread-6] Client 4 left the restaurant
+2016-10-23 18:59:32,458 INFO e.t.t.e.Client [Thread-4] Client 2 left the restaurant
+2016-10-23 18:59:32,507 INFO e.t.t.e.Client [Thread-5] Client 3 release table 2
