@@ -16,7 +16,7 @@ public class Table {
         return tableId;
     }
 
-    public ReentrantLock getLock() {
+    publicasdasd ReentrantLock getLock() {
         return lock;
     }
 
